@@ -7,13 +7,13 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from src.asr.whisper_transcriber import transcribe_audio
 
 if __name__ == "__main__":
-    AUDIO_PATH = "data/raw/sample.mp3"
-    OUTPUT_PATH = "outputs/transcripts/sample.json"
+    AUDIO_PATH = "data/raw/sample2.mp3"
+    OUTPUT_PREFIX = "outputs/transcripts/sample"
 
     result = transcribe_audio(
         file_path=AUDIO_PATH,
         model_size="base",     # Change to "small", "medium", etc. as needed
-        save_to=OUTPUT_PATH
+        save_to=OUTPUT_PREFIX
     )
 
     print("\n📝 Full Transcript:\n")
