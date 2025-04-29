@@ -1,6 +1,5 @@
 # 📄 `README.md`
 
-````markdown
 # Automated Analysis of Football Match Commentary from Audio Signals
 
 ## 📜 Overview
@@ -61,6 +60,7 @@ football_audio_analysis/
 ├── requirements.txt
 └── README.md
 ```
+
 ````
 
 ---
@@ -110,3 +110,4 @@ python src/main.py
 - Use domain-tuned NLP models for football-specific event detection
 - Fine-tune summarization models on match reports
 - Build a lightweight visualization dashboard with Streamlit
+````
