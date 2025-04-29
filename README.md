@@ -61,8 +61,6 @@ football_audio_analysis/
 └── README.md
 ```
 
-````
-
 ---
 
 ## 🚀 How to Run
@@ -110,4 +108,7 @@ python src/main.py
 - Use domain-tuned NLP models for football-specific event detection
 - Fine-tune summarization models on match reports
 - Build a lightweight visualization dashboard with Streamlit
-````
+
+```
+
+```
