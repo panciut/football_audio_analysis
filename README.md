@@ -1,114 +1,108 @@
-# 📄 `README.md`
+# ⚽ Football Commentary Summarization System
 
-# Automated Analysis of Football Match Commentary from Audio Signals
-
-## 📜 Overview
-
-This project develops an **end-to-end audio processing pipeline** for football (soccer) match commentary.  
-Starting from raw audio, the system:
-
-- Transcribes speech using OpenAI's Whisper model
-- Extracts prosodic features (pitch and energy) using librosa
-- Scores and detects emphasized segments based on prosodic analysis
-- Saves enriched structured outputs for further analysis
-
-The final goal is to **extract key events** (goals, fouls, etc.) and **generate match summaries** automatically.
-
----
+## This project processes football match commentary audio into a structured, readable summary of what happened during the game. The pipeline involves automatic transcription, enrichment (prosody/emphasis), linguistic analysis, and event-driven summarization.
 
 ## ✅ Current Features
 
-- **Transcription**:  
-  High-quality transcription of football audio using Whisper.
-
-- **Prosody Extraction**:  
-  Extraction of pitch (fundamental frequency) and energy (loudness) for each segment.
-
-- **Emphasis Detection**:  
-  Segments are automatically scored and marked as emphasized based on normalized prosody.
-
-- **Structured Output**:  
-  All results are saved in `.json` and `.txt` formats for further analysis.
+| Feature            | Status        | Description                                                              |
+| ------------------ | ------------- | ------------------------------------------------------------------------ |
+| Transcription      | ✔ Implemented | Uses Whisper to transcribe match audio                                   |
+| Prosody Extraction | ✔ Implemented | Extracts pitch and energy for emphasis detection using `librosa`         |
+| Emphasis Scoring   | ✔ Implemented | Scores utterances for emotional/semantic importance                      |
+| Output Saving      | ✔ Implemented | Saves transcript as `.json` and `.txt` formats                           |
+| Modular Codebase   | ✔ Implemented | Logic split into `pipeline/`, `utils/`, and configurable via `config.py` |
 
 ---
 
-## 📈 What’s Next
-
-| Phase                  | Description                                              |
-| ---------------------- | -------------------------------------------------------- |
-| **Event Extraction**   | Identify goals, fouls, substitutions from transcripts    |
-| **Summarization**      | Summarize match commentary into short readable summaries |
-| **Visualization**      | Graphs and UI to visualize emphasis, match moments       |
-| **Audio Highlighting** | Export only the emphasized segments as clips             |
-
----
-
-## 📁 Project Structure
+## 🔧 Project Structure
 
 ```bash
-football_audio_analysis/
-├── data/
-│   └── raw/                   # Raw input audio files (.mp3, .wav)
-├── outputs/
-│   └── transcripts/           # Transcription and emphasis outputs
-├── src/
-│   ├── asr/
-│   │   └── whisper_transcriber.py  # Transcription + prosody extraction
-│   ├── emphasis/
-│   │   └── scorer.py               # Emphasis scoring module
-│   └── main.py                     # Main pipeline entry point
-├── requirements.txt
-└── README.md
+src/
+├── config.py              # Central config values
+├── main.py                # Pipeline entry point
+├── utils/
+│   ├── io.py              # Save JSON/TXT and format timestamps
+├── pipeline/
+│   ├── transcriber.py     # Whisper + prosody extraction
+│   ├── emphasis.py        # Emphasis scoring logic
 ```
 
 ---
 
-## 🚀 How to Run
+## 🚧 Development Roadmap
 
-1. **Install Requirements**
+### 🧱 Stage 1 — Text Pipeline Foundation
+
+| Step | Component            | Task                                                  | Tools/Notes        |
+| ---- | -------------------- | ----------------------------------------------------- | ------------------ |
+| 1.1  | **Transcription**    | Use Whisper to transcribe audio. Already implemented. | `whisper`          |
+| 1.2  | **Prosody Analysis** | Extract pitch and energy. Already implemented.        | `librosa`          |
+| 1.3  | **Text Correction**  | Clean up transcription artifacts and fix grammar.     | Small LLM or rules |
+
+➡️ **Goal:** Clean, accurate, and enriched transcript.
+
+---
+
+### 🧠 Stage 2 — Linguistic & Structural Processing
+
+| Step | Component                 | Task                                                             | Tools/Notes                 |
+| ---- | ------------------------- | ---------------------------------------------------------------- | --------------------------- |
+| 2.1  | **Sentence Segmentation** | Break transcript into manageable units (sentences/utterances).   | `spaCy`, rule-based         |
+| 2.2  | **Speaker Attribution**   | (Optional) Tag speaker turns if multi-speaker setup is detected. | Simplified labeling         |
+| 2.3  | **NER & Normalization**   | Detect player names, teams, competitions, time expressions.      | `spaCy`, `stanza`, patterns |
+| 2.4  | **Time Tagging**          | Extract and normalize time mentions ("5th minute", "early on").  | Regex + logic               |
+
+➡️ **Goal:** Transcript is tokenized, tagged, and semantically structured.
+
+---
+
+### ⚽ Stage 3 — Game Event Extraction
+
+| Step | Component                 | Task                                                  | Tools/Notes              |
+| ---- | ------------------------- | ----------------------------------------------------- | ------------------------ |
+| 3.1  | **Event Schema**          | Define events (goal, shot, foul, substitution, etc.). | JSON schema, YAML        |
+| 3.2  | **Rule-Based Extraction** | Extract events using keyword patterns + time anchors. | Regex, heuristics        |
+| 3.3  | **Entity Linking**        | Link players to actions and teams, avoid ambiguity.   | Memory buffer/dictionary |
+| 3.4  | **Chronology Building**   | Order all events by inferred or explicit time.        | Event timestamping logic |
+
+➡️ **Goal:** A full timeline of structured match events.
+
+---
+
+### 📝 Stage 4 — Summary Generation
+
+| Step | Component                        | Task                                                                     | Tools/Notes              |
+| ---- | -------------------------------- | ------------------------------------------------------------------------ | ------------------------ |
+| 4.1  | **Template-Based Summary**       | Generate summaries from structured event lists using sentence templates. | Python templates         |
+| 4.2  | **LLM Summarization (optional)** | Use LLM (e.g., `llama.cpp`, `mistral`, etc.) to generate fluent output.  | Lightweight local LLM    |
+| 4.3  | **Highlight Generation**         | Emphasize most important events (e.g., goals, red cards).                | Emphasis scoring + logic |
+
+➡️ **Goal:** Readable and informative match summary, automatically generated.
+
+---
+
+### 🔁 Stage 5 — Evaluation and Iteration
+
+| Step | Component                 | Task                                                        | Tools/Notes                   |
+| ---- | ------------------------- | ----------------------------------------------------------- | ----------------------------- |
+| 5.1  | **Human Review**          | Manually verify accuracy of extracted events and summaries. | CSV logs, plain text          |
+| 5.2  | **Component Tuning**      | Improve event detection, summarization fluency, or NER.     | Evaluate with match reports   |
+| 5.3  | **End-to-End Test Suite** | Create test cases for the full pipeline.                    | Python `unittest` or `pytest` |
+
+---
+
+## 📦 Installation
 
 ```bash
 pip install -r requirements.txt
 ```
 
-2. **Run the Main Script**
+Ensure `ffmpeg` is installed and available in your system path.
+
+---
+
+## 🚀 Run the Pipeline
 
 ```bash
 python src/main.py
-```
-
-3. **Outputs**
-
-- `outputs/transcripts/sample.json` → full transcript + prosody
-- `outputs/transcripts/sample.txt` → readable text
-- `outputs/transcripts/sample_emphasis.json` → segments with emphasis scores
-
----
-
-## 🛠 Requirements
-
-- Python 3.11+
-- [Whisper](https://github.com/openai/whisper) (`pip install git+https://github.com/openai/whisper.git`)
-- librosa
-- numpy
-- torch
-
----
-
-## 📌 Notes
-
-- Currently optimized for **CPU** usage (no GPU-specific code yet).
-- Works well with 2-5 minute audio clips.
-- Emphasis detection is prosody-only; semantic context detection will be added next.
-
----
-
-## 🤝 Future Improvements
-
-- Use domain-tuned NLP models for football-specific event detection
-- Fine-tune summarization models on match reports
-- Build a lightweight visualization dashboard with Streamlit
-
-```
-
 ```
