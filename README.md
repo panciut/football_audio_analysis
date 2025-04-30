@@ -81,16 +81,6 @@ src/
 
 ---
 
-### 🔁 Stage 5 — Evaluation and Iteration
-
-| Step | Component                 | Task                                                        | Tools/Notes                   |
-| ---- | ------------------------- | ----------------------------------------------------------- | ----------------------------- |
-| 5.1  | **Human Review**          | Manually verify accuracy of extracted events and summaries. | CSV logs, plain text          |
-| 5.2  | **Component Tuning**      | Improve event detection, summarization fluency, or NER.     | Evaluate with match reports   |
-| 5.3  | **End-to-End Test Suite** | Create test cases for the full pipeline.                    | Python `unittest` or `pytest` |
-
----
-
 ## 📦 Installation
 
 ```bash
