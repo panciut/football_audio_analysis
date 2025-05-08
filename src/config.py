@@ -13,3 +13,7 @@ LOG_EMPHASIS = False
 
 # Substitution control
 ENABLE_CANONICAL_SUBSTITUTION = True
+
+
+
+SHOULD_TRANSCRIBE = False  # Set to False to skip transcription

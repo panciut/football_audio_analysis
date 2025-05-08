@@ -23,3 +23,7 @@ def save_plaintext(segments, path: str):
             ts_end = format_timestamp(seg["end"])
             f.write(f"[{ts_start} - {ts_end}] {seg['text']}\n")
     print(f"💾 Saved to {path}")
+
+def load_json(path: str) -> dict:
+    with open(path, "r", encoding="utf-8") as f:
+        return json.load(f)
