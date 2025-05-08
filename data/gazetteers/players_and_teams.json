@@ -1,0 +1,433 @@
+{
+  "entities": [
+    {
+      "name": "Erling Haaland",
+      "type": "PLAYER",
+      "aliases": ["Haaland"],
+      "team": "Manchester City"
+    },
+    {
+      "name": "Kevin De Bruyne",
+      "type": "PLAYER",
+      "aliases": ["De Bruyne", "KDB"],
+      "team": "Manchester City"
+    },
+    {
+      "name": "Phil Foden",
+      "type": "PLAYER",
+      "aliases": ["Foden"],
+      "team": "Manchester City"
+    },
+    {
+      "name": "Jack Grealish",
+      "type": "PLAYER",
+      "aliases": ["Grealish"],
+      "team": "Manchester City"
+    },
+    {
+      "name": "Bernardo Silva",
+      "type": "PLAYER",
+      "aliases": ["Bernardo"],
+      "team": "Manchester City"
+    },
+    {
+      "name": "Rúben Dias",
+      "type": "PLAYER",
+      "aliases": ["Dias"],
+      "team": "Manchester City"
+    },
+    {
+      "name": "John Stones",
+      "type": "PLAYER",
+      "aliases": ["Stones"],
+      "team": "Manchester City"
+    },
+    {
+      "name": "Rodri",
+      "type": "PLAYER",
+      "aliases": ["Rodrigo", "Rodri Hernández"],
+      "team": "Manchester City"
+    },
+    {
+      "name": "Ederson",
+      "type": "PLAYER",
+      "aliases": ["Ederson Moraes"],
+      "team": "Manchester City"
+    },
+    {
+      "name": "Kyle Walker",
+      "type": "PLAYER",
+      "aliases": ["Walker"],
+      "team": "Manchester City"
+    },
+    {
+      "name": "Joško Gvardiol",
+      "type": "PLAYER",
+      "aliases": ["Gvardiol"],
+      "team": "Manchester City"
+    },
+    {
+      "name": "Nathan Aké",
+      "type": "PLAYER",
+      "aliases": ["Aké"],
+      "team": "Manchester City"
+    },
+    {
+      "name": "Manuel Akanji",
+      "type": "PLAYER",
+      "aliases": ["Akanji"],
+      "team": "Manchester City"
+    },
+    {
+      "name": "Matheus Nunes",
+      "type": "PLAYER",
+      "aliases": ["Nunes"],
+      "team": "Manchester City"
+    },
+    {
+      "name": "Jérémy Doku",
+      "type": "PLAYER",
+      "aliases": ["Doku"],
+      "team": "Manchester City"
+    },
+    {
+      "name": "Mateo Kovačić",
+      "type": "PLAYER",
+      "aliases": ["Kovačić", "Kovacic"],
+      "team": "Manchester City"
+    },
+    {
+      "name": "Oscar Bobb",
+      "type": "PLAYER",
+      "aliases": ["Bobb"],
+      "team": "Manchester City"
+    },
+    {
+      "name": "Rico Lewis",
+      "type": "PLAYER",
+      "aliases": ["Lewis"],
+      "team": "Manchester City"
+    },
+    {
+      "name": "Stefan Ortega",
+      "type": "PLAYER",
+      "aliases": ["Ortega"],
+      "team": "Manchester City"
+    },
+    {
+      "name": "Scott Carson",
+      "type": "PLAYER",
+      "aliases": ["Carson"],
+      "team": "Manchester City"
+    },
+    {
+      "name": "Abduqodir Khusanov",
+      "type": "PLAYER",
+      "aliases": ["Khusanov"],
+      "team": "Manchester City"
+    },
+    {
+      "name": "Claudio Echeverri",
+      "type": "PLAYER",
+      "aliases": ["Echeverri"],
+      "team": "Manchester City"
+    },
+    {
+      "name": "Nico González",
+      "type": "PLAYER",
+      "aliases": ["Nico", "González"],
+      "team": "Manchester City"
+    },
+    {
+      "name": "Savinho",
+      "type": "PLAYER",
+      "aliases": ["Sávio", "Savinho"],
+      "team": "Manchester City"
+    },
+    {
+      "name": "Omar Marmoush",
+      "type": "PLAYER",
+      "aliases": ["Marmoush"],
+      "team": "Manchester City"
+    },
+    {
+      "name": "Vitor Reis",
+      "type": "PLAYER",
+      "aliases": ["Reis"],
+      "team": "Manchester City"
+    },
+    {
+      "name": "James McAtee",
+      "type": "PLAYER",
+      "aliases": ["McAtee"],
+      "team": "Manchester City"
+    },
+    {
+      "name": "Nico O'Reilly",
+      "type": "PLAYER",
+      "aliases": ["O'Reilly"],
+      "team": "Manchester City"
+    },
+    {
+      "name": "Jahmai Simpson-Pusey",
+      "type": "PLAYER",
+      "aliases": ["Simpson-Pusey"],
+      "team": "Manchester City"
+    },
+    {
+      "name": "Bruno Fernandes",
+      "type": "PLAYER",
+      "aliases": ["Bruno"],
+      "team": "Manchester United"
+    },
+    {
+      "name": "Marcus Rashford",
+      "type": "PLAYER",
+      "aliases": ["Rashford"],
+      "team": "Manchester United"
+    },
+    {
+      "name": "Casemiro",
+      "type": "PLAYER",
+      "aliases": ["Carlos Casemiro", "Casemiro"],
+      "team": "Manchester United"
+    },
+    {
+      "name": "Scott McTominay",
+      "type": "PLAYER",
+      "aliases": ["McTominay"],
+      "team": "Manchester United"
+    },
+    {
+      "name": "Raphaël Varane",
+      "type": "PLAYER",
+      "aliases": ["Varane"],
+      "team": "Manchester United"
+    },
+    {
+      "name": "Harry Maguire",
+      "type": "PLAYER",
+      "aliases": ["Maguire"],
+      "team": "Manchester United"
+    },
+    {
+      "name": "Luke Shaw",
+      "type": "PLAYER",
+      "aliases": ["Shaw"],
+      "team": "Manchester United"
+    },
+    {
+      "name": "Diogo Dalot",
+      "type": "PLAYER",
+      "aliases": ["Dalot"],
+      "team": "Manchester United"
+    },
+    {
+      "name": "André Onana",
+      "type": "PLAYER",
+      "aliases": ["Onana"],
+      "team": "Manchester United"
+    },
+    {
+      "name": "Jadon Sancho",
+      "type": "PLAYER",
+      "aliases": ["Sancho"],
+      "team": "Manchester United"
+    },
+    {
+      "name": "Anthony Martial",
+      "type": "PLAYER",
+      "aliases": ["Martial"],
+      "team": "Manchester United"
+    },
+    {
+      "name": "Alejandro Garnacho",
+      "type": "PLAYER",
+      "aliases": ["Garnacho"],
+      "team": "Manchester United"
+    },
+    {
+      "name": "Rasmus Højlund",
+      "type": "PLAYER",
+      "aliases": ["Højlund", "Hojlund"],
+      "team": "Manchester United"
+    },
+    {
+      "name": "Mason Mount",
+      "type": "PLAYER",
+      "aliases": ["Mount"],
+      "team": "Manchester United"
+    },
+    {
+      "name": "Christian Eriksen",
+      "type": "PLAYER",
+      "aliases": ["Eriksen"],
+      "team": "Manchester United"
+    },
+    {
+      "name": "Lisandro Martínez",
+      "type": "PLAYER",
+      "aliases": ["Martínez"],
+      "team": "Manchester United"
+    },
+    {
+      "name": "Victor Lindelöf",
+      "type": "PLAYER",
+      "aliases": ["Lindelöf"],
+      "team": "Manchester United"
+    },
+    {
+      "name": "Altay Bayındır",
+      "type": "PLAYER",
+      "aliases": ["Bayındır"],
+      "team": "Manchester United"
+    },
+    {
+      "name": "Tom Heaton",
+      "type": "PLAYER",
+      "aliases": ["Heaton"],
+      "team": "Manchester United"
+    },
+    {
+      "name": "Kobbie Mainoo",
+      "type": "PLAYER",
+      "aliases": ["Mainoo"],
+      "team": "Manchester United"
+    },
+    {
+      "name": "Amad Diallo",
+      "type": "PLAYER",
+      "aliases": ["Amad"],
+      "team": "Manchester United"
+    },
+    {
+      "name": "Joshua Zirkzee",
+      "type": "PLAYER",
+      "aliases": ["Zirkzee"],
+      "team": "Manchester United"
+    },
+    {
+      "name": "Matthijs de Ligt",
+      "type": "PLAYER",
+      "aliases": ["de Ligt"],
+      "team": "Manchester United"
+    },
+    {
+      "name": "Noussair Mazraoui",
+      "type": "PLAYER",
+      "aliases": ["Mazraoui"],
+      "team": "Manchester United"
+    },
+    {
+      "name": "Leny Yoro",
+      "type": "PLAYER",
+      "aliases": ["Yoro"],
+      "team": "Manchester United"
+    },
+    {
+      "name": "Manuel Ugarte",
+      "type": "PLAYER",
+      "aliases": ["Ugarte"],
+      "team": "Manchester United"
+    },
+    {
+      "name": "Chido Obi",
+      "type": "PLAYER",
+      "aliases": ["Obi"],
+      "team": "Manchester United"
+    },
+    {
+      "name": "Elyh Harrison",
+      "type": "PLAYER",
+      "aliases": ["Harrison"],
+      "team": "Manchester United"
+    },
+    {
+  "name": "Dermot Mee",
+  "type": "PLAYER",
+  "aliases": ["Mee"],
+  "team": "Manchester United"
+},
+{
+  "name": "Hubert Graczyk",
+  "type": "PLAYER",
+  "aliases": ["Graczyk"],
+  "team": "Manchester United"
+},
+{
+  "name": "William Murdock",
+  "type": "PLAYER",
+  "aliases": ["Murdock"],
+  "team": "Manchester United"
+},
+{
+  "name": "Harry Amass",
+  "type": "PLAYER",
+  "aliases": ["Amass"],
+  "team": "Manchester United"
+},
+{
+  "name": "Manchester City",
+  "type": "TEAM",
+  "aliases": ["Man City", "City", "Manchester C.F.C."]
+},
+{
+  "name": "Manchester United",
+  "type": "TEAM",
+  "aliases": ["Man U", "United", "Man Utd", "Manchester Utd"]
+}
+,
+  {
+    "name": "FIFA World Cup",
+    "type": "COMPETITION",
+    "aliases": ["World Cup", "FIFA WC", "FIFA Men's World Cup", "2022 World Cup"]
+  },
+  {
+    "name": "UEFA Champions League",
+    "type": "COMPETITION",
+    "aliases": ["Champions League", "UCL", "European Cup"]
+  },
+  {
+    "name": "UEFA Europa League",
+    "type": "COMPETITION",
+    "aliases": ["Europa League", "UEL"]
+  },
+  {
+    "name": "Premier League",
+    "type": "COMPETITION",
+    "aliases": ["English Premier League", "EPL"]
+  },
+  {
+    "name": "Serie A",
+    "type": "COMPETITION",
+    "aliases": ["Serie A TIM", "Italian League"]
+  },
+  {
+    "name": "La Liga",
+    "type": "COMPETITION",
+    "aliases": ["Spanish League", "LaLiga Santander"]
+  },
+  {
+    "name": "FA Cup",
+    "type": "COMPETITION",
+    "aliases": ["The FA Cup", "Emirates FA Cup"]
+  },
+  {
+    "name": "UEFA European Championship",
+    "type": "COMPETITION",
+    "aliases": ["EURO", "Euros", "UEFA Euro", "Euro 2020", "Euro 2024"]
+  },
+  {
+    "name": "Copa América",
+    "type": "COMPETITION",
+    "aliases": ["Copa America", "CONMEBOL Copa América"]
+  },
+  {
+    "name": "Club World Cup",
+    "type": "COMPETITION",
+    "aliases": ["FIFA Club World Cup", "CWC"]
+  }
+]
+
+
+}
