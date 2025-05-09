@@ -8,8 +8,9 @@ GAZETTEER_PATH = "data/gazetteers/players_and_teams.json"
 # Logging controls
 LOG_TRANSCRIPT_PREVIEW = True
 LOG_SENTENCES = False
-LOG_NER = True
+LOG_NER = False
 LOG_EMPHASIS = False
+LOG_EVENTS = True
 
 # Substitution control
 ENABLE_CANONICAL_SUBSTITUTION = True

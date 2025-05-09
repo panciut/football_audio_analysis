@@ -1,0 +1,79 @@
+# data/event_schema.yaml
+
+events:
+  - type: goal
+    trigger_words:
+      [
+        "goal",
+        "scores",
+        "puts it in",
+        "opening goal",
+        "equalizes",
+        "finds the net",
+      ]
+    required_entities: ["PLAYER"]
+    optional_entities: ["TEAM"]
+
+  - type: penalty_awarded
+    trigger_words:
+      ["penalty awarded", "penalty given", "referee points to the spot"]
+    required_entities: []
+    optional_entities: ["PLAYER", "TEAM"]
+
+  - type: penalty_missed
+    trigger_words:
+      ["penalty missed", "saved penalty", "hits the post", "blasts it wide"]
+    required_entities: ["PLAYER"]
+
+  - type: substitution
+    trigger_words:
+      ["comes on", "replaces", "substitute", "subbed off", "change made"]
+    required_entities: ["PLAYER"]
+
+  - type: card
+    trigger_words: ["yellow card", "red card", "booked", "sent off"]
+    required_entities: ["PLAYER"]
+
+  - type: foul
+    trigger_words:
+      ["foul", "free kick", "challenge", "goes down under pressure"]
+    required_entities: ["PLAYER"]
+
+  - type: save
+    trigger_words:
+      ["saves", "denies", "goalkeeper", "blocks the shot", "great stop"]
+    required_entities: []
+    optional_entities: ["PLAYER"]
+
+  - type: assist
+    trigger_words: ["assist", "sets up", "lays it off", "passes", "squares it"]
+    required_entities: ["PLAYER"]
+
+  - type: corner
+    trigger_words: ["corner", "corner kick", "wins a corner"]
+    required_entities: []
+
+  - type: offside
+    trigger_words: ["offside", "flag is up"]
+    required_entities: []
+    optional_entities: ["PLAYER"]
+
+  - type: injury
+    trigger_words:
+      ["injured", "goes down", "limping", "off injured", "receiving treatment"]
+    required_entities: ["PLAYER"]
+
+  - type: var
+    trigger_words: ["VAR", "video assistant", "check", "decision pending"]
+    required_entities: []
+
+  - type: missed_chance
+    trigger_words:
+      [
+        "misses",
+        "off target",
+        "over the bar",
+        "wide of the post",
+        "fails to score",
+      ]
+    required_entities: ["PLAYER"]
