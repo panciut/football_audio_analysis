@@ -13,7 +13,7 @@ from src.pipeline.transcriber import transcribe_audio
 from src.pipeline.emphasis import score_emphasis
 from src.pipeline.segmenter import segment_sentences
 from src.pipeline.ner import extract_named_entities
-from src.pipeline.events import detect_events
+from src.pipeline.event_zero_shot import detect_events_zero_shot  # Updated import
 from src.utils.text import apply_canonical_substitutions
 from src.utils.io import save_json, load_json
 
@@ -69,15 +69,20 @@ if __name__ == "__main__":
             print(f"{flag} [{seg['start']:.2f}-{seg['end']:.2f}] pitch={seg['pitch']}Hz, energy={seg['energy']}, "
                   f"score={seg['emphasis_score']} → {seg['text']}")
 
-    # 6. Event Extraction
-    result["events"] = detect_events(result["sentences"])
-    save_json(result["events"], OUTPUT_PREFIX + "_step6_events.json")
+    # 6. Event Extraction (Zero-Shot)
+    print("\n🚦 Running event detection on context windows...")
+    events = detect_events_zero_shot(result["sentences"], threshold=0.9)
+    result["events"] = events  # assign only after detection is done
+    print(f"✅ Detected {len(events)} events.")
+
+    #   Save after all processing
+    save_json(events, OUTPUT_PREFIX + "_step6_events.json")
+
 
     if LOG_EVENTS:
         print("\n📅 Event Extraction:\n")
         for e in result["events"]:
-            ents = ", ".join(f"{ent['text']} ({ent['label']})" for ent in e["entities"])
-            print(f"→ [{e['type'].upper()}] {e['text']}\n   ↳ Entities: {ents}")
+            print(f"→ [{e['type'].upper()}] {e['text']}\n   ↳ Confidence: {e['confidence']}")
 
     # Final output with everything
     save_json(result, OUTPUT_PREFIX + "_final.json")
