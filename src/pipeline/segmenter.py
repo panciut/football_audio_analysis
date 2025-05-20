@@ -1,19 +1,31 @@
 # src/pipeline/segmenter.py
 
 import spacy
-
-# Load the spaCy English model once at import time
 nlp = spacy.load("en_core_web_sm")
 
-def segment_sentences(text: str) -> list[dict]:
-    """
-    Splits the transcript text into sentence-level segments using spaCy.
 
-    Returns:
-        List of dicts with sentence span and text.
+def segment_sentences(text: str, segments: list = None) -> list[dict]:
+    """
+    Splits transcript text into sentences, optionally aligns each sentence
+    with its source Whisper segment to inherit start timestamps.
     """
     doc = nlp(text)
-    return [
-        {"start_char": sent.start_char, "end_char": sent.end_char, "text": sent.text.strip()}
-        for sent in doc.sents
-    ]
+    split_sentences = []
+
+    for sent in doc.sents:
+        sent_text = sent.text.strip()
+        sent_start = None
+
+        # Try to inherit timing from nearest Whisper segment
+        if segments:
+            for seg in segments:
+                if sent_text in seg["text"]:
+                    sent_start = seg["start"]
+                    break
+
+        split_sentences.append({
+            "text": sent_text,
+            "start": sent_start
+        })
+
+    return split_sentences

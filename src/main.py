@@ -30,7 +30,7 @@ if __name__ == "__main__":
         print(result["text"][:500], "...")
 
     # 2. Sentence Segmentation
-    result["sentences"] = segment_sentences(result["text"])
+    result["sentences"] = segment_sentences(result["text"], result["segments"])
     save_json(result["sentences"], OUTPUT_PREFIX + "_step2_sentences.json")
 
     if LOG_SENTENCES:
@@ -71,11 +71,11 @@ if __name__ == "__main__":
 
     # 6. Event Extraction (Zero-Shot)
     print("\n🚦 Running event detection on context windows...")
-    events = detect_events_zero_shot(result["sentences"], threshold=0.9)
+    events = detect_events_zero_shot(result["sentences"])
     result["events"] = events  # assign only after detection is done
     print(f"✅ Detected {len(events)} events.")
 
-    #   Save after all processing
+#   Save after all processing
     save_json(events, OUTPUT_PREFIX + "_step6_events.json")
 
 

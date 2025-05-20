@@ -1,7 +1,7 @@
 # src/config.py
 
-AUDIO_PATH = "data/raw/trimmed_match_sample4.mp3"
-OUTPUT_PREFIX = "outputs/transcripts/trimmed_match_sample4"
+AUDIO_PATH = "data/raw/match_sample.mp3"
+OUTPUT_PREFIX = "outputs/transcripts/match_sample"
 WHISPER_MODEL = "small"  # Options: "tiny", "base", "small", "medium", "large"
 GAZETTEER_PATH = "data/gazetteers/players_and_teams.json"
 
@@ -17,4 +17,4 @@ ENABLE_CANONICAL_SUBSTITUTION = True
 
 
 
-SHOULD_TRANSCRIBE = True  # Set to False to skip transcription
+SHOULD_TRANSCRIBE = False  # Set to False to skip transcription
